@@ -1,16 +1,21 @@
 
 public interface UIInterface {
 	
-	/**
-	 * Displays a welcome message.
-	 */
-	void displayWelcome();
-	
-	/**
-	 * Displays a goodbye message.
-	 */
-	void displayGoodbye();
-	
+	public static final String greeting = "Welcome to the Guesser/Learner application!";
+	public static final String goodbye = "Goodbye! Thanks for playing and helping me learn!";
+	public static final String instructions = "In this game you think of a " +
+								"object and I will try to guess what it is.";
+	public static final String thinkOfAnObject = "In this game you think of a " +
+								"object and I will try to guess what it is.";
+	public static final String askObject = "Is it a object?";
+	public static final String giveUp = "I give up. " +
+								"What kind of object were you thinking of?";
+	public static final String askForQuestion = "Please enter a yes/no question" +
+								" that distinguishes between a incorrectGuess " +
+								"and a correctAnswer:";
+	public static final String askForAnswer = "What is the answer for a object?";
+	public static final String askPlayAgain = "Would you like to play again?";
+	public static final String victoryResponse = "I guessed it!";
 	/**
 	 * Displays a message that requires an answer.
 	 * @param question - question that requires an answer
@@ -33,4 +38,22 @@ public interface UIInterface {
 	 * The nature of the display will depend on the application.
 	 */
 	void display(String input);
+	
+	/** 
+	 * Replaces the word "object" in a string with the input string.
+	 * @param input - String to replace "object"
+	 * @return processed String with "object" replaced
+	 */
+	String replaceObject(String input, String correctValue);
+	
+	/**
+	 * Replaces the string "object1" with the incorrect guess, and replaces
+	 * the string "object2" with the correct answer.
+	 * @param String incorrectGuess - guess by program that is wrong
+	 * @param String correctAnswer - object being thought of by user
+	 * @param String unprocessed - string that refers generically to 
+	 * 								incorrectGuess and correctAnswer
+	 */
+	String replaceObject(String incorrectGuess, String correctAnswer,
+							String unprocessed);
 }

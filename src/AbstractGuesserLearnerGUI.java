@@ -1,31 +1,9 @@
 import javax.swing.JOptionPane;
-
-/**
- * 
- */
-
 /**
  * @author philraath
  *
  */
 public abstract class AbstractGuesserLearnerGUI implements UIInterface {
-
-	/* (non-Javadoc)
-	 * @see UIInterface#displayWelcome()
-	 */
-	@Override
-	public void displayWelcome() {
-		display("Welcome to the Guesser/Learner application!");
-	}
-
-	/* (non-Javadoc)
-	 * @see UIInterface#displayGoodbye()
-	 */
-	@Override
-	public void displayGoodbye() {
-		display("Goodbye! Thanks for playing!");
-
-	}
 
 	/* (non-Javadoc)
 	 * @see UIInterface#askQuestion(java.lang.String)
@@ -49,7 +27,25 @@ public abstract class AbstractGuesserLearnerGUI implements UIInterface {
 	@Override
 	public void display(String input) {
 		JOptionPane.showMessageDialog(null, input);
-
+	}
+	
+	/*
+	 * @see UIInterface#replaceObject(java.lang.String)
+	 */
+	public String replaceObject(String correctValue, String generic){
+		return generic.replaceAll("object", correctValue);
+	}
+	
+	/*
+	 * @see UIInterface#replaceObject(java.lang.String, java.lang.String, 
+	 * 								  java.lang.String)
+	 */
+	public String replaceObject(String incorrectGuess, String correctAnswer,
+								String generic){
+		String processed;
+		processed = generic.replaceAll("incorrectGuess", incorrectGuess);
+		processed = processed.replaceAll("correctAnswer", correctAnswer);
+		return processed;		
 	}
 
 }
