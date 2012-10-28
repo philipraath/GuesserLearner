@@ -16,7 +16,6 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public void displayWelcome() {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -25,8 +24,6 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public void displayGoodbye() {
-		// TODO Auto-generated method stub
-
 	}
 
 	/* 
@@ -34,8 +31,8 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public String askQuestion(String question) {
-		return null;
-		// TODO Auto-generated method stub
+		System.out.println(question);
+		return inputReader.next();
 	}
 
 	/* 
@@ -43,7 +40,6 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public void displayStatment(String statement) {
-		// TODO Auto-generated method stub
 
 	}
 }

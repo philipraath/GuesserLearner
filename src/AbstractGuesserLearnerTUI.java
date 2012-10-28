@@ -35,7 +35,6 @@ public abstract class AbstractGuesserLearnerTUI implements UIInterface {
 	@Override
 	public String askQuestion(String question) {
 		return null;
-		// TODO Auto-generated method stub
 	}
 
 	/* 

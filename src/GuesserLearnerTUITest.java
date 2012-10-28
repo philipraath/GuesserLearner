@@ -7,8 +7,10 @@ import org.junit.Test;
 
 public class GuesserLearnerTUITest {
 
+	String question;
 	@Before
 	public void setUp() throws Exception {
+		question = "Is this a question?";
 	}
 
 	@After
@@ -18,6 +20,9 @@ public class GuesserLearnerTUITest {
 	@Test
 	public void askQuestionTest() {
 		GuesserLearnerTUI tui = new GuesserLearnerTUI();
+		String response = tui.askQuestion(question);
+		assertNotNull(response);
+		
 	}
 
 }
