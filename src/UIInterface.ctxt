@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ displayWelcome()
+comment0.text=\n\ Displays\ a\ welcome\ message.\n
+comment1.params=
+comment1.target=void\ displayGoodbye()
+comment1.text=\n\ Displays\ a\ goodbye\ message.\n
+comment2.params=question
+comment2.target=java.lang.String\ askQuestion(java.lang.String)
+comment2.text=\n\ Displays\ a\ message\ that\ requires\ an\ answer.\n\ @param\ question\ -\ question\ that\ requires\ an\ answer\n\ @return\ String\ containing\ response\ to\ questions\n
+comment3.params=statement
+comment3.target=void\ displayStatment(java.lang.String)
+comment3.text=\n\ Displays\ an\ informative\ message\ that\ does\ not\ require\ an\ answer.\n\ @param\ statement\ -\ statement\ to\ be\ displayed\n
+numComments=4
