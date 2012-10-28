@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 /**
- * 
- */
-
-/**
  * @author philraath
  *
  */
@@ -16,8 +12,7 @@ public abstract class AbstractGuesserLearnerTUI implements UIInterface {
 	 */
 	@Override
 	public void displayWelcome() {
-		// TODO Auto-generated method stub
-
+		display("Welcome to the Guesser/Learner application!");
 	}
 
 	/* 
@@ -25,8 +20,7 @@ public abstract class AbstractGuesserLearnerTUI implements UIInterface {
 	 */
 	@Override
 	public void displayGoodbye() {
-		// TODO Auto-generated method stub
-
+		display("Goodbye! Thanks for playing!");
 	}
 
 	/* 
@@ -34,16 +28,23 @@ public abstract class AbstractGuesserLearnerTUI implements UIInterface {
 	 */
 	@Override
 	public String askQuestion(String question) {
-		return null;
+		display(question);
+		return inputReader.next();
 	}
 
 	/* 
 	 * @see UIInterface#displayStatment()
 	 */
 	@Override
-	public void displayStatment(String statement) {
-		// TODO Auto-generated method stub
-
+	public void makeStatement(String statement) {
+		display(statement);
+	}
+	
+	/*
+	 * @see UIInterface#display(java.lang.String)
+	 */
+	public void display(String input) {
+		System.out.println(input);
 	}
 
 }

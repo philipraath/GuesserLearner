@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 /**
  * 
  */
@@ -8,39 +10,53 @@
  */
 public abstract class AbstractGuesserLearnerGUI implements UIInterface {
 
-	/* 
+	/**
+	 * @author philraath
+	 *
+	 */
+	public class GuesserLearnerGUI {
+
+	}
+
+	/* (non-Javadoc)
 	 * @see UIInterface#displayWelcome()
 	 */
 	@Override
 	public void displayWelcome() {
-		// TODO Auto-generated method stub
-
+		display("Welcome to the Guesser/Learner application!");
 	}
 
-	/* 
+	/* (non-Javadoc)
 	 * @see UIInterface#displayGoodbye()
 	 */
 	@Override
 	public void displayGoodbye() {
-		// TODO Auto-generated method stub
+		display("Goodbye! Thanks for playing!");
 
 	}
 
-	/* 
-	 * @see UIInterface#displayQuestion()
+	/* (non-Javadoc)
+	 * @see UIInterface#askQuestion(java.lang.String)
 	 */
 	@Override
 	public String askQuestion(String question) {
-		return null;
-		// TODO Auto-generated method stub
+		return JOptionPane.showInputDialog(question);
 	}
 
-	/* 
-	 * @see UIInterface#displayStatment()
+	/* (non-Javadoc)
+	 * @see UIInterface#makeStatement(java.lang.String)
 	 */
 	@Override
-	public void displayStatment(String statement) {
-		// TODO Auto-generated method stub
+	public void makeStatement(String statement) {
+		display(statement);
+	}
+
+	/* (non-Javadoc)
+	 * @see UIInterface#display(java.lang.String)
+	 */
+	@Override
+	public void display(String input) {
+		JOptionPane.showMessageDialog(null, input);
 
 	}
 

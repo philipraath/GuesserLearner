@@ -16,7 +16,7 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public void displayWelcome() {
-
+		display("Welcome to the Guesser/Learner application!");
 	}
 
 	/* 
@@ -24,6 +24,7 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public void displayGoodbye() {
+		display("Goodbye! Thanks for playing!");
 	}
 
 	/* 
@@ -31,7 +32,7 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 */
 	@Override
 	public String askQuestion(String question) {
-		System.out.println(question);
+		display(question);
 		return inputReader.next();
 	}
 
@@ -39,7 +40,17 @@ public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 	 * @see UIInterface#displayStatment()
 	 */
 	@Override
-	public void displayStatment(String statement) {
-
+	public void makeStatement(String statement) {
+		display(statement);
 	}
+
+	/*
+	 * @see UIInterface#display(java.lang.String)
+	 */
+	@Override
+	public void display(String input) {
+		System.out.println(input);
+	}
+	
+	
 }

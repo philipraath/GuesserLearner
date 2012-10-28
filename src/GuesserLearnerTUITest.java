@@ -22,7 +22,6 @@ public class GuesserLearnerTUITest {
 		GuesserLearnerTUI tui = new GuesserLearnerTUI();
 		String response = tui.askQuestion(question);
 		assertNotNull(response);
-		
 	}
 
 }
