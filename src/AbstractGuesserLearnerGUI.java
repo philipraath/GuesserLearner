@@ -10,14 +10,6 @@ import javax.swing.JOptionPane;
  */
 public abstract class AbstractGuesserLearnerGUI implements UIInterface {
 
-	/**
-	 * @author philraath
-	 *
-	 */
-	public class GuesserLearnerGUI {
-
-	}
-
 	/* (non-Javadoc)
 	 * @see UIInterface#displayWelcome()
 	 */

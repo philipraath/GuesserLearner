@@ -10,7 +10,7 @@ public class GuesserLearnerTUITest {
 	String question;
 	@Before
 	public void setUp() throws Exception {
-		question = "Is this a question?";
+		question = "Is this a question? \nPlease enter 'yes'.";
 	}
 
 	@After
@@ -22,6 +22,7 @@ public class GuesserLearnerTUITest {
 		GuesserLearnerTUI tui = new GuesserLearnerTUI();
 		String response = tui.askQuestion(question);
 		assertNotNull(response);
+		assert(response.equals("yes"));
 	}
 
 }
