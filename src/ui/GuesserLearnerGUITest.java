@@ -36,13 +36,13 @@ public class GuesserLearnerGUITest {
 		assertFalse(response.contains("object"));
 		assertEquals("Is it a flower?", response);
 		
-		response = gui.replaceObject(correctValue, UserCommunicationStrings.goodbye);
+		response = gui.replaceObject(correctValue, UserCommunicationStrings.stateGoodbye);
 		assertFalse(response.contains("object"));
-		assertEquals(UserCommunicationStrings.goodbye, response);
+		assertEquals(UserCommunicationStrings.stateGoodbye, response);
 		
 		
 		response = gui.replaceObject(incorrectGuess, correctAnswer,
-				UserCommunicationStrings.askForQuestion);
+				UserCommunicationStrings.askForDistinguishingQuestion);
 		String expectedResponse = "Please enter a yes/no question" +
 				" that distinguishes between a daisy " +
 				"and a rose:";
