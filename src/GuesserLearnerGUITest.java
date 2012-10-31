@@ -30,18 +30,18 @@ public class GuesserLearnerGUITest {
 	@Test
 	public void replaceObjectTest(){
 		GuesserLearnerGUI gui = new GuesserLearnerGUI();
-		String response = gui.replaceObject(correctValue, UIInterface.askObject);
+		String response = gui.replaceObject(correctValue, UserCommunicationStrings.askObject);
 		assertNotNull(response);
 		assertFalse(response.contains("object"));
 		assertEquals("Is it a flower?", response);
 		
-		response = gui.replaceObject(correctValue, gui.goodbye);
+		response = gui.replaceObject(correctValue, UserCommunicationStrings.goodbye);
 		assertFalse(response.contains("object"));
-		assertEquals(gui.goodbye, response);
+		assertEquals(UserCommunicationStrings.goodbye, response);
 		
 		
 		response = gui.replaceObject(incorrectGuess, correctAnswer,
-										UIInterface.askForQuestion);
+				UserCommunicationStrings.askForQuestion);
 		String expectedResponse = "Please enter a yes/no question" +
 				" that distinguishes between a daisy " +
 				"and a rose:";

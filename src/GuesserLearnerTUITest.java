@@ -31,18 +31,18 @@ public class GuesserLearnerTUITest {
 	@Test
 	public void replaceObjectTest(){
 		GuesserLearnerTUI tui = new GuesserLearnerTUI();
-		String response = tui.replaceObject(correctValue, UIInterface.askObject);
+		String response = tui.replaceObject(correctValue, UserCommunicationStrings.askObject);
 		assertNotNull(response);
 		assertFalse(response.contains("object"));
 		assertEquals("Is it a flower?", response);
 		
-		response = tui.replaceObject(correctValue, tui.goodbye);
+		response = tui.replaceObject(correctValue, UserCommunicationStrings.goodbye);
 		assertFalse(response.contains("object"));
-		assertEquals(tui.goodbye, response);
+		assertEquals(UserCommunicationStrings.goodbye, response);
 		
 		
 		response = tui.replaceObject(incorrectGuess, correctAnswer,
-										UIInterface.askForQuestion);
+										UserCommunicationStrings.askForQuestion);
 		String expectedResponse = "Please enter a yes/no question" +
 				" that distinguishes between a daisy " +
 				"and a rose:";
