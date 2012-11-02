@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ isLeafTest()
+comment0.text=\n\ Tests\ whether\ a\ given\ BTNode<E>\ is\ a\ leaf\ by\ checking\ to\ see\ if\n\ both\ children\ are\ null.\ Tests\ the\ following\:\n\ \t\t1)\ that\ it\ returns\ true\ when\ root\ \=\=\ null\n\ \t\t2)\ that\ it\ returns\ true\ when\ root.left\ &&\ root.right\ are\ null\n\ \t\t3)\ that\ it\ returns\ false\ when\ root.left\ \=\ BTNode<E>\n\ \t\t4)\ that\ it\ returns\ false\ when\ root.right\ \=\ BTNode<E>\n\ \t\t5)\ that\ it\ returns\ false\ when\ root.left\ &&\ root.right\ \=\ BTNode<E>\n
+comment1.params=
+comment1.target=void\ getLeftSubtreeTest()
+comment1.text=\n\ Tests\ that\ a\ binary\ tree\ pointed\ to\ by\ a\ given\ BTNode's\ left\n\ pointer\ returns\ the\ correct\ binary\ tree.\ Tests\ the\ following\:\n\ \t\t1)\ that\ it\ returns\ a\ BTNode<E>\n\t\t2)\ that\ it\ returns\ a\ BTNode<E>\ identical\ to\ root.left\n\ \t\t\tincluding\ the\ data\ and\ its\ pointers\n
+comment2.params=
+comment2.target=void\ getRightSubtreeTest()
+comment2.text=\n\ Tests\ that\ a\ binary\ tree\ pointed\ to\ by\ a\ given\ BTNode's\ right\n\ pointer\ returns\ the\ correct\ binary\ tree.\ Tests\ the\ following\:\n\t\t1)\ that\ it\ returns\ a\ BTNode<E>\n\t\t2)\ that\ it\ returns\ a\ BTNode<E>\ identical\ to\ root.right\n\t\t\tincluding\ the\ data\ and\ its\ pointers\n
+comment3.params=
+comment3.target=void\ getDataTest()
+comment3.text=\n\ Tests\ whether\ the\ BinaryTree's\ getData()\ method\ returns\n\ the\ correct\ data.\ Tests\ the\ following\:\n\ \t\t1)\ that\ it\ returns\ the\ correct\ data\ type\ (primitive)\n\ \t\t2)\ that\ it\ returns\ the\ correct\ data\ type\ (object)\n\ \t\t3)\ that\ it\ returns\ the\ correct\ value\ of\ a\ primitive\n\ \t\t4)\ that\ it\ returns\ the\ correct\ instance\ of\ an\ object\n
+comment4.params=
+comment4.target=void\ toStringTest()
+comment4.text=\n\ Tests\ whether\ the\ toString\ method\ returns\ a\ string\ that\ is\ an\ in-order\n\ traversal\ of\ the\ data\ fields\ in\ the\ BinaryTree.\ Tests\ the\ following\:\n\ \t\t1)\ that\ it\ returns\ an\ in-order\ traversal\ of\ a\ BinaryTree\n
+numComments=5

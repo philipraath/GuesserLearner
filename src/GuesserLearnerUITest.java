@@ -17,12 +17,13 @@ public class GuesserLearnerUITest {
 	String incorrectGuess = "daisy";
 	String correctAnswer = "rose";
 	Properties properties;
-	UIInterface ui;
+	UIInterface tui;
 	UIInterface gui;
+	
 	@Before
 	public void setUp() throws Exception {
 		question = "Is this a question? \nPlease enter 'yes'.";
-		ui = new GuesserLearnerTUI();
+		tui = new GuesserLearnerTUI();
 		gui = new GuesserLearnerGUI();
 		
 		properties = new Properties();
@@ -40,23 +41,23 @@ public class GuesserLearnerUITest {
 
 	@Test
 	public void askQuestionTest() {
-		askQuestion(ui);
-		askQuestion(gui);
-	}
-
-	private void askQuestion(UIInterface ui) {
-		String response = ui.askQuestion(question);
-		assertNotNull(response);
-		assert(response.equals("yes"));
+		genericTestAskQuestion(tui);
+		genericTestAskQuestion(gui);
 	}
 	
 	@Test
 	public void replaceObjectTest(){
-		replaceObject(ui);
-		replaceObject(gui);
+		genericTestReplaceObject(tui);
+		genericTestReplaceObject(gui);
 	}
 
-	private void replaceObject(UIInterface ui) {
+	private void genericTestAskQuestion(UIInterface ui) {
+		String response = ui.askQuestion(question);
+		assertNotNull(response);
+		assert(response.equals("yes"));
+	}
+
+	private void genericTestReplaceObject(UIInterface ui) {
 		String response = ui.replaceObject(correctValue, 
 				properties.getProperty("askObject"));
 		assertNotNull(response);

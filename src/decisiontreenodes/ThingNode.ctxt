@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=thing
+comment0.target=ThingNode(java.lang.Object)
+comment0.text=\n\ Single\ argument\ Constructor\ for\ ThingNode<T>.\ Instantiates\n\ a\ leaf\ node\ where\ the\ value\ field\ is\ passed\ a\ parameter.\n\ @param\ thing\ -\ a\ String\ assigned\ to\ the\ Node's\ value\ field\n
+comment1.params=
+comment1.target=java.lang.Object\ getThing()
+comment1.text=\n\ Returns\ the\ value\ of\ the\ ThingNode<T>.\n\ @return\ String\ or\ null\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\n\ Returns\ a\ String\ representing\ the\ data\ assigned\ to\ the\ \n\ value\ variable.\n\ @return\ String\n
+numComments=3

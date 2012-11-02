@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DecisionTreeNode()
+comment0.text=\n\ \n
+comment1.params=value\ no\ yes
+comment1.target=DecisionTreeNode(java.lang.Object,\ DecisionTreeNode,\ DecisionTreeNode)
+comment1.text=\n\ \n\ @param\ value\n\ @param\ no\n\ @param\ yes\n
+comment2.params=
+comment2.target=DecisionTreeNode\ getYesLink()
+comment2.text=\n\ \n\ @return\n
+comment3.params=
+comment3.target=DecisionTreeNode\ getNoLink()
+comment3.text=\n\ \n\ @return\n
+comment4.params=link
+comment4.target=void\ setYesLink(DecisionTreeNode)
+comment4.text=\n\ \n\ @param\ link\n
+comment5.params=link
+comment5.target=void\ setNoLink(DecisionTreeNode)
+comment5.text=\n\ \n\ @param\ link\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\n\ \n\ @return\n
+numComments=7

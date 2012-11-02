@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Guesser()
+comment0.text=\n\ Default\ Guesser\ Constructor.\ Constructs\ a\ tree\ with\n\ a\ single\ ThingNode<String>\ root.\n
+comment1.params=FILENAME
+comment1.target=Guesser(java.lang.String)
+comment1.text=\n\ Single\ parameter\ Guesser\ Constructor.\ Constructs\ a\ tree\n\ by\ deserializing\ a\ .ser\ file\ and\ assigning\ it\ to\ root.\n\ @param\ fileName\n
+comment2.params=
+comment2.target=void\ addNodeToTree()
+comment2.text=\n\ Add\ a\ new\ DecisionTreeNode<String>\ to\ the\ Tree.\n
+comment3.params=thing
+comment3.target=decisiontreenodes.ThingNode\ createThingNode(java.lang.String)
+comment3.text=\n\ Constructs\ a\ new\ ThingNode\ from\ user\ input.\n\ @param\ thing\ -\ String\ parameter\ for\ ThingNode\ constructor\n\ @return\ ThingNode<String>\n
+comment4.params=userYesNo\ newQuestion\ newThing
+comment4.target=decisiontreenodes.DecisionTreeNode\ performTreeSurgery(java.lang.String,\ decisiontreenodes.QuestionNode,\ decisiontreenodes.ThingNode)
+comment4.text=\n\ Creates\ a\ new\ tree\ consisting\ of\ a\ QuestionNode\ and\ its\ two\n\ ThingNode\ children.\ \ as\ a\ child\ to\ the\ current\ root's\n\ parent.\ The\ tree\ \n\ @param\ userYesNo\n\ @param\ newQuestion\n\ @param\ newThing\n\ @return\n
+numComments=5

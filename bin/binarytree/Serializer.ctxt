@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=filename\ object
+comment0.target=void\ serializeToFile(java.lang.String,\ java.lang.Object)
+comment0.text=\n\ Serializes\ an\ object\ to\ a\ file\ named\ with\ the\ filename.\n\ @param\ filename\ -\ String,\ the\ filename\ to\ save\ to\n\ @param\ object\ -\ Object,\ any\ subclass\ of\ Object\n\ @throws\ IOException\n
+comment1.params=filename
+comment1.target=java.lang.Object\ deserializeFromFile(java.lang.String)
+comment1.text=\n\ Returns\ the\ deserialization\ of\ a\ file\ containing\ a\ serialized\ object.\n\ @param\ filename\ -\ String,\ the\ filename\ to\ save\ to\n\ @return\ Object\ -\ whatever\ object\ is\ stored\ in\ the\ file\n\ @throws\ IOException\ -\ file\ not\ found\n
+numComments=2

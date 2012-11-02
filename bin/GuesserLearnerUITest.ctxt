@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ setUp()
+comment1.params=
+comment1.target=void\ tearDown()
+comment2.params=
+comment2.target=void\ askQuestionTest()
+comment3.params=
+comment3.target=void\ replaceObjectTest()
+comment4.params=ui
+comment4.target=void\ genericTestAskQuestion(UIInterface)
+comment5.params=ui
+comment5.target=void\ genericTestReplaceObject(UIInterface)
+numComments=6
