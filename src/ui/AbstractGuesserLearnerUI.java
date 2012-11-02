@@ -4,7 +4,7 @@ package ui;
  * @author philraath
  *
  */
-public abstract class AbstractGuesserLearnerTUI implements UIInterface {
+public abstract class AbstractGuesserLearnerUI implements UIInterface {
 
 	
 

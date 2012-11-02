@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author philraath
  *
  */
-public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
+public class GuesserLearnerTUI extends AbstractGuesserLearnerUI {
 
 	protected static final Scanner inputReader = new Scanner(System.in);
 	
