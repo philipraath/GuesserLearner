@@ -44,14 +44,14 @@ public class GuesserLearnerTUITest {
 	@Test
 	public void replaceObjectTest(){
 		GuesserLearnerTUI tui = new GuesserLearnerTUI();
-		String response = tui.replaceObject(correctValue, UserCommunicationStrings.askObject);
+		String response = tui.replaceObject(correctValue, prop.getProperty("askObject"));
 		assertNotNull(response);
 		assertFalse(response.contains("object"));
 		assertEquals("Is it a flower?", response);
 		
-		response = tui.replaceObject(correctValue, UserCommunicationStrings.stateGoodbye);
+		response = tui.replaceObject(correctValue, prop.getProperty("stateGoodbye"));
 		assertFalse(response.contains("object"));
-		assertEquals(UserCommunicationStrings.stateGoodbye, response);
+		assertEquals(prop.getProperty("stateGoodbye"), response);
 		
 		response = tui.replaceObject(correctValue, prop.getProperty("stateGreeting"));
 		assertFalse(response.contains("object"));
@@ -59,7 +59,7 @@ public class GuesserLearnerTUITest {
 		
 		
 		response = tui.replaceObject(incorrectGuess, correctAnswer,
-										UserCommunicationStrings.askForDistinguishingQuestion);
+										prop.getProperty("askForDistinguishingQuestion"));
 		String expectedResponse = "Please enter a yes/no question" +
 				" that distinguishes between a daisy " +
 				"and a rose:";
