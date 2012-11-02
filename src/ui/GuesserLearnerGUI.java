@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
  * @author philraath
  *
  */
-public class GuesserLearnerGUI extends AbstractGuesserLearnerGUI {		
+public class GuesserLearnerGUI extends AbstractGuesserLearnerUI {		
 
 	/* (non-Javadoc)
 	 * @see UIInterface#askQuestion(java.lang.String)
