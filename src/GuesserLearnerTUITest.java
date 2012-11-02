@@ -16,13 +16,14 @@ public class GuesserLearnerTUITest {
 	String correctValue = "flower";
 	String incorrectGuess = "daisy";
 	String correctAnswer = "rose";
-	Properties prop;
+	Properties properties;
 	@Before
 	public void setUp() throws Exception {
 		question = "Is this a question? \nPlease enter 'yes'.";
-		prop = new Properties();
+		
+		properties = new Properties();
 		try{
-			prop.load(new FileInputStream("config.properties"));
+			properties.load(new FileInputStream("config.properties"));
 		}
 		catch(IOException ex){
 			ex.printStackTrace();
@@ -44,22 +45,19 @@ public class GuesserLearnerTUITest {
 	@Test
 	public void replaceObjectTest(){
 		GuesserLearnerTUI tui = new GuesserLearnerTUI();
-		String response = tui.replaceObject(correctValue, prop.getProperty("askObject"));
+		String response = tui.replaceObject(correctValue, 
+				properties.getProperty("askObject"));
 		assertNotNull(response);
 		assertFalse(response.contains("object"));
 		assertEquals("Is it a flower?", response);
 		
-		response = tui.replaceObject(correctValue, prop.getProperty("stateGoodbye"));
+		response = tui.replaceObject(correctValue, 
+				properties.getProperty("stateGoodbye"));
 		assertFalse(response.contains("object"));
-		assertEquals(prop.getProperty("stateGoodbye"), response);
-		
-		response = tui.replaceObject(correctValue, prop.getProperty("stateGreeting"));
-		assertFalse(response.contains("object"));
-		assertEquals(prop.getProperty("stateGreeting"), response);
-		
+		assertEquals(properties.getProperty("stateGoodbye"), response);
 		
 		response = tui.replaceObject(incorrectGuess, correctAnswer,
-										prop.getProperty("askForDistinguishingQuestion"));
+				properties.getProperty("askForDistinguishingQuestion"));
 		String expectedResponse = "Please enter a yes/no question" +
 				" that distinguishes between a daisy " +
 				"and a rose:";
