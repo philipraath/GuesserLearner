@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ getQuestionTest()
-comment0.text=\n\ Tests\ that\ a\ call\ to\ a\ QuestionNode's\ getQuestion()\n\ method\ returns\ the\ data\ stored\ in\ the\ value\ variable.\n\ Tests\ the\ following\:\n\ \t1)\ that\ the\ returned\ value\ is\ the\ correct\ String,\ or\ null.\n\ \ 2)\ that\ the\ returned\ value\ is\ type\ String\ when\ not\ null.\n\ \ 3)\ that\ data\ in\ other\ QuestionNode\ fields\ are\ not\ returned.\n
-comment1.params=
-comment1.target=void\ toStringTest()
-comment1.text=\n\ Tests\ whether\ the\ toString\ method\ returns\ a\ string\ that\ reflects\n\ the\ data\ stored\ in\ the\ value\ variable\ of\ the\ QuestionNode.\ \n\ Tests\ the\ following\:\n\ \t\t1)\ that\ it\ returns\ a\ String\ appropriate\ to\ an\ instance's\ \n\ \t\t\ttoString()\ method\n
-numComments=2

@@ -43,4 +43,16 @@ public interface UIInterface {
 	 */
 	String replaceObject(String incorrectGuess, String correctAnswer,
 							String unprocessed);
+	/**
+     * Displays an error message when validation of user input fails.
+     */
+	String invalidEntry(String errorMessage);
+	
+	/**
+     * Returns a char of either 'y' or 'n' from any input that starts with 'y' or 'n'
+     * or continues to prod the user until it can.
+     * @param yesNo - String obtained from user input via scanner.next()
+     * @return testResponse - char that should either be 'y' or 'n'
+     */
+    public char validateYesOrNo( String yesNo );
 }

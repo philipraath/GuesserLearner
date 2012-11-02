@@ -13,8 +13,9 @@ public class DecisionTree implements Serializable {
 	 */
 	private static final long serialVersionUID = -7112302926311497490L;
 
+	private DecisionTreeNode<String> parent;
 	private DecisionTreeNode<String> root;
-	
+		
 	private static final String FILENAME = "animal";
 	
 	/**
@@ -55,18 +56,23 @@ public class DecisionTree implements Serializable {
 	
 	/**
 	 * Creates a new tree consisting of a QuestionNode and its two
-	 * ThingNode children. 
-	 * parent. The tree 
-	 * @param userYesNo
-	 * @param newQuestion
-	 * @param newThing
-	 * @return
+	 * ThingNode children. This tree is subsequently added to the reference where
+	 * this new subtree is to be placed. 
+	 *  
+	 * @param rootReference - the pointer to the location where the tree will be added
+	 * @param newQuestion - the value to be added to the new QuestionNode
+	 * @param noChild -the child to be added to QuestionNode.left
+	 * @param yesChild - the child to be added to QuestionNode.right 
 	 */
-	public DecisionTreeNode<String> performTreeSurgery( String userYesNo, 
-														QuestionNode<String> newQuestion,
-														ThingNode<String> newThing ) 
+	public void performTreeSurgery( DecisionTreeNode<String> rootReference,
+														String newQuestion,
+														ThingNode<String> noChild,
+														ThingNode<String> yesChild ) 
 	{
-		return null;
+		DecisionTreeNode<String> newSubTree = new QuestionNode<String>( newQuestion,
+																		noChild,
+																		yesChild );
+		rootReference = newSubTree;
 	}
 	
 	/**
@@ -87,5 +93,27 @@ public class DecisionTree implements Serializable {
 	public DecisionTreeNode<String> nextYesNode()
 	{
 		return root.getYesLink();
+	}
+	
+	/**
+	 * Simple getter method for returning the DecisionTreeNode<String>
+	 * assigned to the variable 'root'
+	 * 
+	 * @return DecisionTreeNode<String> - root
+	 */
+	public DecisionTreeNode<String> getRoot()
+	{
+		return root;
+	}
+	
+	/**
+	 * Simple getter method for returning the DecisionTreeNode<String>
+	 * assigned to the variable 'parent'
+	 * 
+	 * @return DecisionTreeNode<String> - parent
+	 */
+	public DecisionTreeNode<String> getParent()
+	{
+		return parent;
 	}
 }

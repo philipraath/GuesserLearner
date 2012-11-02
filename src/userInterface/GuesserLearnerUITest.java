@@ -51,13 +51,35 @@ public class GuesserLearnerUITest {
 		genericTestReplaceObject(tui);
 		genericTestReplaceObject(gui);
 	}
+	
+	@Test
+	public void invalidEntryTest(){
+		genericTestInvalidEntry(tui);
+		genericTestInvalidEntry(gui);
+	}
+	
+	@Test
+	public void validateYesOrNoTest(){
+		genericTestValidateYesOrNo(tui);
+		genericTestValidateYesOrNo(gui);
+	}
 
+	/**
+	 * tests the askQuestion method for UIInterface
+	 * @param ui - can receive either a graphic or text based
+	 * 				instance of UIInterface
+	 */
 	private void genericTestAskQuestion(UIInterface ui) {
 		String response = ui.askQuestion(question);
 		assertNotNull(response);
 		assert(response.equals("yes"));
 	}
 
+	/**
+	 * tests the replaceObject method for UIInterface
+	 * @param ui - can receive either a graphic or text based
+	 * 				instance of UIInterface
+	 */
 	private void genericTestReplaceObject(UIInterface ui) {
 		String response = ui.replaceObject(correctValue, 
 				properties.getProperty("askObject"));
@@ -77,5 +99,32 @@ public class GuesserLearnerUITest {
 				"and a rose:";
 		assertNotNull(response);
 		assertEquals(expectedResponse, response);
+	}
+	
+	private void genericTestInvalidEntry(UIInterface ui){
+		String response = ui.invalidEntry("Please enter 'yes' " +
+				"to test invalidEntry");
+		assertNotNull(response);
+		assert(response.equals("yes"));
+	}
+	
+	private void genericTestValidateYesOrNo(UIInterface ui){
+		char response = ui.validateYesOrNo("y");
+		assertTrue(response == 'y');
+		response = ui.validateYesOrNo("Y");
+		assertTrue(response == 'y');
+		response = ui.validateYesOrNo("n");
+		assertTrue(response == 'n');
+		response = ui.validateYesOrNo("N");
+		assertTrue(response == 'n');
+		
+		response = ui.validateYesOrNo("yasdfasdfasdf");
+		assertTrue(response == 'y');
+		response = ui.validateYesOrNo("Yasdfasdfas");
+		assertTrue(response == 'y');
+		response = ui.validateYesOrNo("nasdfasdfa");
+		assertTrue(response == 'n');
+		response = ui.validateYesOrNo("Nasdfasdf");
+		assertTrue(response == 'n');
 	}
 }
