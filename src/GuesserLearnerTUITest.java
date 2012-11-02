@@ -1,6 +1,8 @@
 
 import static org.junit.Assert.*;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.junit.After;
@@ -18,6 +20,13 @@ public class GuesserLearnerTUITest {
 	@Before
 	public void setUp() throws Exception {
 		question = "Is this a question? \nPlease enter 'yes'.";
+		prop = new Properties();
+		try{
+			prop.load(new FileInputStream("config.properties"));
+		}
+		catch(IOException ex){
+			ex.printStackTrace();
+		}
 	}
 
 	@After
@@ -43,6 +52,10 @@ public class GuesserLearnerTUITest {
 		response = tui.replaceObject(correctValue, UserCommunicationStrings.stateGoodbye);
 		assertFalse(response.contains("object"));
 		assertEquals(UserCommunicationStrings.stateGoodbye, response);
+		
+		response = tui.replaceObject(correctValue, prop.getProperty("stateGreeting"));
+		assertFalse(response.contains("object"));
+		assertEquals(prop.getProperty("stateGreeting"), response);
 		
 		
 		response = tui.replaceObject(incorrectGuess, correctAnswer,
