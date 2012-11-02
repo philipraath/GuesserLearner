@@ -11,6 +11,8 @@ import java.util.Scanner;
  */
 public class GuesserLearnerTUI extends AbstractGuesserLearnerTUI {
 
+	protected static final Scanner inputReader = new Scanner(System.in);
+	
 	/* 
 	 * @see UIInterface#displayQuestion()
 	 */
