@@ -1,17 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ displayWelcome()
-comment0.text=\ \n\ @see\ UIInterface\#displayWelcome()\n
-comment1.params=
-comment1.target=void\ displayGoodbye()
-comment1.text=\ \n\ @see\ UIInterface\#displayGoodbye()\n
-comment2.params=question
-comment2.target=java.lang.String\ askQuestion(java.lang.String)
-comment2.text=\ \n\ @see\ UIInterface\#displayQuestion()\n
-comment3.params=statement
-comment3.target=void\ makeStatement(java.lang.String)
-comment3.text=\ \n\ @see\ UIInterface\#displayStatment()\n
-comment4.params=input
-comment4.target=void\ display(java.lang.String)
-comment4.text=\n\ @see\ UIInterface\#display(java.lang.String)\n
-numComments=5
+comment0.params=question
+comment0.target=java.lang.String\ askQuestion(java.lang.String)
+comment0.text=\ \n\ @see\ UIInterface\#displayQuestion()\n
+comment1.params=input
+comment1.target=void\ display(java.lang.String)
+comment1.text=\n\ @see\ UIInterface\#display(java.lang.String)\n
+numComments=2

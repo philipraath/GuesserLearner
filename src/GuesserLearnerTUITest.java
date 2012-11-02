@@ -1,5 +1,7 @@
-package ui;
+
 import static org.junit.Assert.*;
+
+import java.util.Properties;
 
 import org.junit.After;
 import org.junit.Before;
@@ -12,6 +14,7 @@ public class GuesserLearnerTUITest {
 	String correctValue = "flower";
 	String incorrectGuess = "daisy";
 	String correctAnswer = "rose";
+	Properties prop;
 	@Before
 	public void setUp() throws Exception {
 		question = "Is this a question? \nPlease enter 'yes'.";
